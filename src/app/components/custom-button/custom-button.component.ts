@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Platform } from '@ionic/angular';
 import { NewsService } from 'src/app/services/news.service';
 
 @Component({
@@ -11,16 +10,10 @@ import { NewsService } from 'src/app/services/news.service';
 export class CustomButtonComponent implements OnInit {
   @Input() coords: any;
   constructor(
-    public platform: Platform,
     public router: Router,
     public newsService: NewsService
     ) { 
     this.coords = { latitude: null, longitude: null };
-  }
-
-  isAndroid(){
-    //check if the platform is Android
-    return this.platform.is('android');
   }
 
   pageMap(){
