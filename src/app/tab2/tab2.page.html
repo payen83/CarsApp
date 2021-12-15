@@ -1,17 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Geolocation
     </ion-title>
+    <ion-button *ngIf="isAndroid() && coords.latitude" (click)="pageMap()" fill="clear" slot="end"><ion-icon slot="icon-only" name="map"></ion-icon></ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Geolocation</ion-title>
+      <ion-button *ngIf="coords.latitude" (click)="pageMap()" fill="clear" slot="end"><ion-icon slot="icon-only" name="map"></ion-icon></ion-button>
     </ion-toolbar>
   </ion-header>
+  
+  <h2>Latitude: {{ coords.latitude }}</h2>
+  <h2>Longitude: {{ coords.longitude }}</h2>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
 </ion-content>

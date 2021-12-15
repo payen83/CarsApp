@@ -8,7 +8,16 @@ export class NewsService {
   public baseURL = 'https://newsapi.org/v2';
   public apiKey = '2871131a0c474263abd6029bd6380e9d';
   public newsData: any;
+  public coords: any;
   constructor(private httpClient: HttpClient) { }
+
+  setCoords(coords: any){
+    this.coords = coords;
+  }
+
+  getCoords(){
+    return this.coords || { longitude: -0.09, latitude: 51.505 };
+  }
 
   getNews(){
     const fullURL = this.baseURL + '/everything?q=tesla&from=2021-11-14&sortBy=publishedAt&apiKey=' + this.apiKey;
