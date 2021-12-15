@@ -31,5 +31,4 @@ export class MapPage implements OnInit {
     .openPopup();
   }
 
-
 }

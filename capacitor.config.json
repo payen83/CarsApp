@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "CarsApp",
-	"webDir": "www",
-	"bundledWebRuntime": false
+  "appId": "com.caspian.carsapp",
+  "appName": "CarsApp",
+  "webDir": "www",
+  "bundledWebRuntime": false
 }

@@ -1,0 +1,4 @@
+<ion-toolbar>
+  <ion-title size="large">Geolocation</ion-title>
+  <ion-button *ngIf="coords.latitude" (click)="pageMap()" fill="clear" slot="end"><ion-icon slot="icon-only" name="map"></ion-icon></ion-button>
+</ion-toolbar>
